@@ -10,11 +10,24 @@ namespace PingPongApp.Tests
       [TestMethod]
       public void CountToNumber_IsAnArrayofNumbers_True()
       {
-          List<int> expectedList = new List<int> {};
-          expectedList.Add(1);
-          expectedList.Add(2);
+          List<string> expectedList = new List<string> {};
+          expectedList.Add("1");
+          expectedList.Add("2");
 
-          List<int> actualList = PingPong.CountToNumber(2);
+          List<string> actualList = PingPong.CountToNumber(2);
+
+          CollectionAssert.AreEqual(expectedList, actualList);
+      }
+
+      [TestMethod]
+      public void CountToNumber_MultiplesOfThreePing_True()
+      {
+          List<string> expectedList = new List<string> {};
+          expectedList.Add("1");
+          expectedList.Add("2");
+          expectedList.Add("ping");
+
+          List<string> actualList = PingPong.CountToNumber(3);
 
           CollectionAssert.AreEqual(expectedList, actualList);
       }
