@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace LeapYearApp
+namespace PingPongApp
 {
   public class Program
   {

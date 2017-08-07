@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PingPongApp.Models;
+using System.Collections.Generic;
 
 namespace PingPongApp.Tests
 {
@@ -13,10 +14,9 @@ namespace PingPongApp.Tests
           expectedList.Add(1);
           expectedList.Add(2);
 
-          List<int> actualList = new List<int> {};
-          actualList.CountToNumber(2);
+          List<int> actualList = PingPong.CountToNumber(2);
 
-          Assert.AreEqual(expectedList, actualList);
+          CollectionAssert.AreEqual(expectedList, actualList);
       }
   }
 }
