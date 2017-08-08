@@ -46,5 +46,30 @@ namespace PingPongApp.Tests
 
           CollectionAssert.AreEqual(expectedList, actualList);
       }
+
+      [TestMethod]
+      public void CountToNumber_MultiplesOfFifteenPingPong_True()
+      {
+          List<string> expectedList = new List<string> {};
+          expectedList.Add("1");
+          expectedList.Add("2");
+          expectedList.Add("ping");
+          expectedList.Add("4");
+          expectedList.Add("pong");
+          expectedList.Add("ping");
+          expectedList.Add("7");
+          expectedList.Add("8");
+          expectedList.Add("ping");
+          expectedList.Add("pong");
+          expectedList.Add("11");
+          expectedList.Add("ping");
+          expectedList.Add("13");
+          expectedList.Add("14");
+          expectedList.Add("pingpong");
+
+          List<string> actualList = PingPong.CountToNumber(15);
+
+          CollectionAssert.AreEqual(expectedList, actualList);
+      }
   }
 }

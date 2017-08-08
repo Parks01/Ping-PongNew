@@ -9,7 +9,11 @@ namespace PingPongApp.Models
             List<string> listOfNumbers = new List<string> {};
             for (int i = 1; i <= number; i++)
             {
-                if (i % 3 == 0)
+                if (i % 15 == 0)
+                {
+                    listOfNumbers.Add("pingpong");
+                }
+                else if (i % 3 == 0)
                 {
                     listOfNumbers.Add("ping");
                 }
