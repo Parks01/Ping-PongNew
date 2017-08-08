@@ -13,6 +13,10 @@ namespace PingPongApp.Models
                 {
                     listOfNumbers.Add("ping");
                 }
+                else if (i % 5 == 0)
+                {
+                    listOfNumbers.Add("pong");
+                }
                 else
                 {
                     listOfNumbers.Add(i.ToString());
